@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
     String TAG = "메인 액티비티";
+    int clickNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,14 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate() 호출됨");
 
         Button button = findViewById(R.id.testBtn);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clickNum += 1;
+                Log.d(TAG, "클릭 횟수 : " + clickNum);
+            }
+        });
 
     }
     @Override
