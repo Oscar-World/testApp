@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,12 +20,15 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate() 호출됨");
 
         Button button = findViewById(R.id.testBtn);
+        TextView textView = findViewById(R.id.textView);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 clickNum += 1;
                 Log.d(TAG, "클릭 횟수 : " + clickNum);
+
+                textView.setText("터치 횟수 : " + String.valueOf(clickNum));
             }
         });
 
@@ -33,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
         Log.d(TAG, "onStart() 호출됨");
+
+
+
     }
     @Override
     protected void onResume(){
