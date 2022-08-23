@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -18,13 +21,23 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
         Log.d(TAG, "onCreate() 호출됨");
 
+        TextView name_Text = findViewById(R.id.name_Text);
+        TextView age_Text = findViewById(R.id.age_Text);
         Button button = findViewById(R.id.back_Btn);
+
+        Intent i = getIntent();
+        String name = i.getStringExtra("이름");
+        String age = i.getStringExtra("나이");
+
+        Log.d(TAG, "getIntent 이름 : " + name);
+        Log.d(TAG, "getIntent 나이 : " + age);
+
+        name_Text.setText(name);
+        age_Text.setText(age);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent i = new Intent(SecondActivity.this, MainActivity.class);
-//                startActivity(i);
                 finish();
             }
         });

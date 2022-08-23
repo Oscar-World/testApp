@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,12 +19,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate() 호출됨");
 
+        EditText name_EditText = findViewById(R.id.name_EditText);
+        EditText age_EditText = findViewById(R.id.age_EditText);
         Button button = findViewById(R.id.change_Btn);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                String name = name_EditText.getText().toString();
+                String age = age_EditText.getText().toString();
+
                 Intent i = new Intent(MainActivity.this,SecondActivity.class);
+                i.putExtra("이름",name);
+                i.putExtra("나이",age);
+                Log.d(TAG, "putExtra 이름 : " + name);
+                Log.d(TAG, "putExtra 나이 : " + age);
                 startActivity(i);
             }
         });
