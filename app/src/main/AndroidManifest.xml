@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".TableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FrameActivity"
+            android:exported="false" />
+        <activity
             android:name=".LinearActivity2"
             android:exported="false" />
         <activity
