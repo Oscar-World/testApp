@@ -8,41 +8,29 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
-    String TAG = "메인 액티비티";
+    String TAG = "두번째 액티비티";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_second);
         Log.d(TAG, "onCreate() 호출됨");
 
-        Button button = findViewById(R.id.change_Btn);
+        Button button = findViewById(R.id.back_Btn);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this,SecondActivity.class);
-                startActivity(i);
+//                Intent i = new Intent(SecondActivity.this, MainActivity.class);
+//                startActivity(i);
+                finish();
             }
         });
 
-
-//        Button button = findViewById(R.id.button);
-//        TextView textView = (TextView) findViewById(R.id.textView);
-//
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                clickNum += 1;
-//                Log.d(TAG, "터치 횟수 : " + clickNum);
-//
-//                textView.setText("터치 횟수 : " + String.valueOf(clickNum));
-//            }
-//        });
-
     }
+
     @Override
     protected void onStart(){
         super.onStart();
