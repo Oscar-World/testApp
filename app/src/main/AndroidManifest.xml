@@ -16,7 +16,7 @@
             android:name=".FrameActivity"
             android:exported="false" />
         <activity
-            android:name=".LinearActivity2"
+            android:name=".LinearActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

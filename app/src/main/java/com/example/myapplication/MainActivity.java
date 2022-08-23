@@ -19,26 +19,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate() 호출됨");
 
-        Button button = findViewById(R.id.button);
-        TextView textView = (TextView) findViewById(R.id.textView);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                clickNum += 1;
-                Log.d(TAG, "터치 횟수 : " + clickNum);
-
-                textView.setText("터치 횟수 : " + String.valueOf(clickNum));
-            }
-        });
+//        Button button = findViewById(R.id.button);
+//        TextView textView = (TextView) findViewById(R.id.textView);
+//
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                clickNum += 1;
+//                Log.d(TAG, "터치 횟수 : " + clickNum);
+//
+//                textView.setText("터치 횟수 : " + String.valueOf(clickNum));
+//            }
+//        });
 
     }
     @Override
     protected void onStart(){
         super.onStart();
         Log.d(TAG, "onStart() 호출됨");
-
-
 
     }
     @Override
