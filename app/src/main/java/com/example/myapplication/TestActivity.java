@@ -17,26 +17,27 @@ public class TestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_test);
 
         TextView textView = findViewById(R.id.textView);
-        Button button = findViewById(R.id.button);
+        Button button_1 = findViewById(R.id.button_1);
+        Button button_10 = findViewById(R.id.button_10);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        button_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 clickNum += 1;
                 textView.setText("Click : " + clickNum);
-                
+
             }
         });
 
-//        button.setOnLongClickListener(new View.OnLongClickListener() {
-//            @Override
-//            public boolean onLongClick(View view) {
-//                clickNum += 10;
-//                textView.setText("Click : " + clickNum);
-//                return false;
-//            }
-//        });
+        button_10.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                clickNum += 10;
+                textView.setText("Click : " + clickNum);
+                return true;
+            }
+        });
 
     }
 }
