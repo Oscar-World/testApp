@@ -49,4 +49,93 @@
 
 <!--    </LinearLayout>-->
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="60dp"
+        >
+
+        <Button
+            android:id="@+id/color_Btn"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="60dp"
+            android:text="컬러"
+            android:textSize="20dp"
+            android:textColor="#64c9ff"
+            android:backgroundTint="#f6f8f8"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/color_Block"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="60dp"
+            android:text="컬러"
+            android:textSize="20dp"
+            android:backgroundTint="#64c9ff"
+            android:visibility="visible"
+            />
+
+        <Button
+            android:id="@+id/black_Btn"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:text="흑백"
+            android:textSize="20dp"
+            android:textColor="#64c9ff"
+            android:backgroundTint="#f6f8f8"
+            android:visibility="visible"
+            />
+
+        <Button
+            android:id="@+id/black_Block"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:text="흑백"
+            android:textSize="20dp"
+            android:backgroundTint="#64c9ff"
+            android:visibility="gone"
+            />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/tiger1"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761"
+        app:srcCompat="@drawable/tiger1" />
+
+    <ImageView
+        android:id="@+id/tiger2"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761"
+        app:srcCompat="@drawable/tiger2" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
