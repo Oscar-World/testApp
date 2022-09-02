@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 //                Log.d(TAG, "putExtra 나이 : " + age);
 //                startActivity(i);
 
-                Intent i = new Intent(MainActivity.this, TestActivity.class);
+                Intent i = new Intent(MainActivity.this, ToastTestActivity.class);
                 startActivity(i);
 
             }
