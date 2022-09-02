@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".ApplyVisibleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VisibleActivity"
+            android:exported="false" />
+        <activity
             android:name=".ToastTestActivity"
             android:exported="false" />
         <activity
