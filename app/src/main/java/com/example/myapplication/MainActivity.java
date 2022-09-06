@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 //                Log.d(TAG, "putExtra 나이 : " + age);
 //                startActivity(i);
 
-                Intent i = new Intent(MainActivity.this, VisibleActivity.class);
+                Intent i = new Intent(MainActivity.this, AnimActivity.class);
                 startActivity(i);
 
             }
