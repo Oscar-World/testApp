@@ -3,11 +3,13 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,9 +21,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate() 호출됨");
 
+        TextView name_Text = findViewById(R.id.name_Text);
+        TextView age_Text = findViewById(R.id.age_Text);
+        TextView nickname_Text = findViewById(R.id.nickname_Text);
         EditText name_EditText = findViewById(R.id.name_EditText);
         EditText age_EditText = findViewById(R.id.age_EditText);
-        Button button = findViewById(R.id.change_Btn);
+        EditText nickname_EditText = findViewById(R.id.nickname_EditText);
+        Button button = findViewById(R.id.apply_Btn);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("사용자 정보",MODE_PRIVATE);
+        String userInfo = sharedPreferences.getString("정보","");
+        String[] info = userInfo.split(",");
+
+        String name = info[0];
+        String age = info[1];
+        String nickname = info[2];
+
+        name_Text.setText(name);
+        age_Text.setText(age);
+        nickname_Text.setText(nickname);
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,23 +48,20 @@ public class MainActivity extends AppCompatActivity {
 
                 String name = name_EditText.getText().toString();
                 String age = age_EditText.getText().toString();
+                String nickname = nickname_EditText.getText().toString();
 
-                if (name.equals("") & age.equals("")) {
-                    Intent i = new Intent(MainActivity.this,SecondActivity.class);
-                    startActivity(i);
-                } else {
-                    Intent i = new Intent(MainActivity.this,SecondActivity.class);
-                    i.putExtra("이름",name);
-                    i.putExtra("나이",age);
-                    Log.d(TAG, "putExtra 이름 : " + name);
-                    Log.d(TAG, "putExtra 나이 : " + age);
-                    startActivity(i);
-                }
+                name_Text.setText(name);
+                age_Text.setText(age);
+                nickname_Text.setText(nickname);
 
+                name_EditText.setText("");
+                age_EditText.setText("");
+                nickname_EditText.setText("");
 
-
-//                Intent i = new Intent(MainActivity.this, AnimActivity.class);
-//                startActivity(i);
+                SharedPreferences sharedPreferences = getSharedPreferences("사용자 정보",MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("정보",name + "," + age + "," + nickname);
+                editor.commit();
 
             }
         });
