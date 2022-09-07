@@ -27,18 +27,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-//                String name = name_EditText.getText().toString();
-//                String age = age_EditText.getText().toString();
-//
-//                Intent i = new Intent(MainActivity.this,SecondActivity.class);
-//                i.putExtra("이름",name);
-//                i.putExtra("나이",age);
-//                Log.d(TAG, "putExtra 이름 : " + name);
-//                Log.d(TAG, "putExtra 나이 : " + age);
-//                startActivity(i);
+                String name = name_EditText.getText().toString();
+                String age = age_EditText.getText().toString();
 
-                Intent i = new Intent(MainActivity.this, AnimActivity.class);
-                startActivity(i);
+                if (name.equals("") & age.equals("")) {
+                    Intent i = new Intent(MainActivity.this,SecondActivity.class);
+                    startActivity(i);
+                } else {
+                    Intent i = new Intent(MainActivity.this,SecondActivity.class);
+                    i.putExtra("이름",name);
+                    i.putExtra("나이",age);
+                    Log.d(TAG, "putExtra 이름 : " + name);
+                    Log.d(TAG, "putExtra 나이 : " + age);
+                    startActivity(i);
+                }
+
+
+
+//                Intent i = new Intent(MainActivity.this, AnimActivity.class);
+//                startActivity(i);
 
             }
         });

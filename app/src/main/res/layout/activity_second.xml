@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="이곳은 B 액티비티입니다."
+        android:text="당신의 정보입니다."
         android:textSize="25dp"
         android:textColor="#ff0000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,21 +20,7 @@
         app:layout_constraintVertical_bias="0.123" />
 
     <TextView
-        android:id="@+id/name_Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="이 름"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38"
-        />
-
-    <TextView
-        android:id="@+id/age_Text"
+        android:id="@+id/age_Text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="나 이"
@@ -44,8 +30,33 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.603"
-        />
+        app:layout_constraintVertical_bias="0.476" />
+
+    <TextView
+        android:id="@+id/name_Text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이 름"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308" />
+
+    <TextView
+        android:id="@+id/nickname_Text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="별 명"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.657" />
 
     <Button
         android:id="@+id/back_Btn"

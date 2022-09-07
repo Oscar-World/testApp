@@ -32,8 +32,10 @@ public class SecondActivity extends AppCompatActivity {
         Log.d(TAG, "getIntent 이름 : " + name);
         Log.d(TAG, "getIntent 나이 : " + age);
 
-        name_Text.setText(name);
-        age_Text.setText(age);
+        if (name != null & age != null) {
+            name_Text.setText(name);
+            age_Text.setText(age);
+        }
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
