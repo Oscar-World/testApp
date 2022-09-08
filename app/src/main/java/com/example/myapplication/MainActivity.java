@@ -29,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
         EditText nickname_EditText = findViewById(R.id.nickname_EditText);
         Button button = findViewById(R.id.apply_Btn);
 
+        Button vertical_Btn = findViewById(R.id.vertical_Btn);
+        Button horizontal_Btn = findViewById(R.id.horizontal_Btn);
+        Button grid_Btn = findViewById(R.id.grid_Btn);
+
         SharedPreferences sharedPreferences = getSharedPreferences("사용자 정보",MODE_PRIVATE);
         String userInfo = sharedPreferences.getString("정보","");
         String[] info = userInfo.split(",");
@@ -65,6 +69,34 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        vertical_Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(MainActivity.this, Recycler_Vertical.class);
+                startActivity(i);
+
+            }
+        });
+
+        horizontal_Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(MainActivity.this, Recycler_Horizontal.class);
+                startActivity(i);
+
+            }
+        });
+
+        grid_Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
 
     }
     @Override

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".Recycler_Horizontal"
+            android:exported="false" />
+        <activity
+            android:name=".Recycler_Vertical"
+            android:exported="false" />
+        <activity
             android:name=".AnimActivity"
             android:exported="false" />
         <activity
