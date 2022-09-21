@@ -21,8 +21,8 @@ public class Recycler_Horizontal extends AppCompatActivity {
         }
 
         // 리사이클러뷰에 LinearLayoutManager 객체 지정.
-        RecyclerView recyclerView = findViewById(R.id.recycler_vertical) ;
-        recyclerView.setLayoutManager(new LinearLayoutManager(this)) ;
+        RecyclerView recyclerView = findViewById(R.id.recycler_horizontal) ;
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this)) ;
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
 
         // 리사이클러뷰에 SimpleTextAdapter 객체 지정.
