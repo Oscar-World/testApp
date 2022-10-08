@@ -21,8 +21,8 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
         Log.d(TAG, "onCreate() 호출됨");
 
-        TextView name_Text = findViewById(R.id.name_Text);
-        TextView age_Text = findViewById(R.id.age_Text);
+        TextView name_Text = findViewById(R.id.name_Text2);
+        TextView age_Text = findViewById(R.id.age_Text2);
         Button button = findViewById(R.id.back_Btn);
 
         Intent i = getIntent();

@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,9 +30,41 @@ public class MainActivity extends AppCompatActivity {
 //        EditText nickname_EditText = findViewById(R.id.nickname_EditText);
 //        Button button = findViewById(R.id.apply_Btn);
 //
+        Button list_Btn = findViewById(R.id.list_Btn);
         Button vertical_Btn = findViewById(R.id.vertical_Btn);
         Button horizontal_Btn = findViewById(R.id.horizontal_Btn);
         Button grid_Btn = findViewById(R.id.grid_Btn);
+
+        View.OnClickListener Click = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (view.getId() == R.id.list_Btn) {
+                    Toast.makeText(getApplicationContext(),"리스트", Toast.LENGTH_SHORT).show();
+                }
+                switch (view.getId()) {
+                    case R.id.vertical_Btn:
+                        Intent i2 = new Intent(MainActivity.this, Recycler_Vertical.class);
+                        startActivity(i2);
+                        break;
+                    case R.id.horizontal_Btn:
+                        Intent i3 = new Intent(MainActivity.this, Recycler_Horizontal.class);
+                        startActivity(i3);
+                        break;
+                    case  R.id.grid_Btn:
+                        Intent i4 = new Intent(MainActivity.this, Recycler_Grid.class);
+                        startActivity(i4);
+                        break;
+                }
+
+            }
+        };
+
+        list_Btn.setOnClickListener(Click);
+        vertical_Btn.setOnClickListener(Click);
+        horizontal_Btn.setOnClickListener(Click);
+        grid_Btn.setOnClickListener(Click);
+
 //
 //        SharedPreferences sharedPreferences = getSharedPreferences("사용자 정보",MODE_PRIVATE);
 //        String userInfo = sharedPreferences.getString("정보","");
@@ -69,36 +102,6 @@ public class MainActivity extends AppCompatActivity {
 //
 //            }
 //        });
-
-        vertical_Btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent i = new Intent(MainActivity.this, Recycler_Vertical.class);
-                startActivity(i);
-
-            }
-        });
-
-        horizontal_Btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent i = new Intent(MainActivity.this, Recycler_Horizontal.class);
-                startActivity(i);
-
-            }
-        });
-
-        grid_Btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent i = new Intent(MainActivity.this, Recycler_Grid.class);
-                startActivity(i);
-
-            }
-        });
 
 
     }
