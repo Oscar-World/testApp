@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DrawActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+    <Button
+        android:id="@+id/reset_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#bbbbbb"
+        android:text="초기화"
+        android:textSize="16dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        />
+
+    <Button
+        android:id="@+id/increase_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#bbbbbb"
+        android:text="+"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:onClick="increase"
+        />
+
+    <Button
+        android:id="@+id/decrease_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#bbbbbb"
+        android:text="-"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:onClick="decrease"
+        />
+
+    <Button
+        android:id="@+id/black_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
+        android:text="검정"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:onClick="setBlack"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+    <Button
+        android:id="@+id/red_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ff0000"
+        android:text="빨강"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:onClick="setRed"
+        />
+
+    <Button
+        android:id="@+id/blue_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0000ff"
+        android:text="파랑"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:onClick="setBlue"
+        />
+
+    <Button
+        android:id="@+id/green_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#22ff22"
+        android:text="초록"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:onClick="setGreen"
+        />
+
+    <Button
+        android:id="@+id/yellow_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffee00"
+        android:text="노랑"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:onClick="setYellow"
+        />
+
+    </LinearLayout>
+
+    <com.example.myapplication.DrawBoard
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

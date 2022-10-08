@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 //        EditText nickname_EditText = findViewById(R.id.nickname_EditText);
 //        Button button = findViewById(R.id.apply_Btn);
 //
+        Button draw_Btn = findViewById(R.id.draw_Btn);
         Button list_Btn = findViewById(R.id.list_Btn);
         Button vertical_Btn = findViewById(R.id.vertical_Btn);
         Button horizontal_Btn = findViewById(R.id.horizontal_Btn);
@@ -39,10 +40,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (view.getId() == R.id.list_Btn) {
-                    Toast.makeText(getApplicationContext(),"리스트", Toast.LENGTH_SHORT).show();
-                }
                 switch (view.getId()) {
+                    case R.id.draw_Btn:
+                        Intent i = new Intent(MainActivity.this, DrawActivity.class);
+                        startActivity(i);
+                        break;
+                    case R.id.list_Btn:
+                        Toast.makeText(getApplicationContext(),"리스트", Toast.LENGTH_SHORT).show();
+                        break;
                     case R.id.vertical_Btn:
                         Intent i2 = new Intent(MainActivity.this, Recycler_Vertical.class);
                         startActivity(i2);
@@ -60,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        draw_Btn.setOnClickListener(Click);
         list_Btn.setOnClickListener(Click);
         vertical_Btn.setOnClickListener(Click);
         horizontal_Btn.setOnClickListener(Click);
