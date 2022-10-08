@@ -21,54 +21,54 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate() 호출됨");
 
-        TextView name_Text = findViewById(R.id.name_Text);
-        TextView age_Text = findViewById(R.id.age_Text);
-        TextView nickname_Text = findViewById(R.id.nickname_Text);
-        EditText name_EditText = findViewById(R.id.name_EditText);
-        EditText age_EditText = findViewById(R.id.age_EditText);
-        EditText nickname_EditText = findViewById(R.id.nickname_EditText);
-        Button button = findViewById(R.id.apply_Btn);
-
+//        TextView name_Text = findViewById(R.id.name_Text);
+//        TextView age_Text = findViewById(R.id.age_Text);
+//        TextView nickname_Text = findViewById(R.id.nickname_Text);
+//        EditText name_EditText = findViewById(R.id.name_EditText);
+//        EditText age_EditText = findViewById(R.id.age_EditText);
+//        EditText nickname_EditText = findViewById(R.id.nickname_EditText);
+//        Button button = findViewById(R.id.apply_Btn);
+//
         Button vertical_Btn = findViewById(R.id.vertical_Btn);
         Button horizontal_Btn = findViewById(R.id.horizontal_Btn);
         Button grid_Btn = findViewById(R.id.grid_Btn);
+//
+//        SharedPreferences sharedPreferences = getSharedPreferences("사용자 정보",MODE_PRIVATE);
+//        String userInfo = sharedPreferences.getString("정보","");
+//        String[] info = userInfo.split(",");
+//
+//        String name = info[0];
+//        String age = info[1];
+//        String nickname = info[2];
+//
+//        name_Text.setText(name);
+//        age_Text.setText(age);
+//        nickname_Text.setText(nickname);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("사용자 정보",MODE_PRIVATE);
-        String userInfo = sharedPreferences.getString("정보","");
-        String[] info = userInfo.split(",");
 
-        String name = info[0];
-        String age = info[1];
-        String nickname = info[2];
-
-        name_Text.setText(name);
-        age_Text.setText(age);
-        nickname_Text.setText(nickname);
-
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                String name = name_EditText.getText().toString();
-                String age = age_EditText.getText().toString();
-                String nickname = nickname_EditText.getText().toString();
-
-                name_Text.setText(name);
-                age_Text.setText(age);
-                nickname_Text.setText(nickname);
-
-                name_EditText.setText("");
-                age_EditText.setText("");
-                nickname_EditText.setText("");
-
-                SharedPreferences sharedPreferences = getSharedPreferences("사용자 정보",MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("정보",name + "," + age + "," + nickname);
-                editor.commit();
-
-            }
-        });
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                String name = name_EditText.getText().toString();
+//                String age = age_EditText.getText().toString();
+//                String nickname = nickname_EditText.getText().toString();
+//
+//                name_Text.setText(name);
+//                age_Text.setText(age);
+//                nickname_Text.setText(nickname);
+//
+//                name_EditText.setText("");
+//                age_EditText.setText("");
+//                nickname_EditText.setText("");
+//
+//                SharedPreferences sharedPreferences = getSharedPreferences("사용자 정보",MODE_PRIVATE);
+//                SharedPreferences.Editor editor = sharedPreferences.edit();
+//                editor.putString("정보",name + "," + age + "," + nickname);
+//                editor.commit();
+//
+//            }
+//        });
 
         vertical_Btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +93,9 @@ public class MainActivity extends AppCompatActivity {
         grid_Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Intent i = new Intent(MainActivity.this, Recycler_Grid.class);
+                startActivity(i);
 
             }
         });

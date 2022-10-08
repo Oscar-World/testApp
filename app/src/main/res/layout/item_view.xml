@@ -9,13 +9,14 @@
         android:id="@+id/recycler_Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
+        android:textSize="25dp"
+        android:padding="15dp"
         />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#999999"
+        android:background="#aaaaaa"
         />
 
 </LinearLayout>
