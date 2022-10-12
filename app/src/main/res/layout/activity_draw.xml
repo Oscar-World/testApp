@@ -11,7 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="4">
+        android:weightSum="4"
+        android:background="#dbddfe"
+        >
 
     <Button
         android:id="@+id/reset_Btn"
@@ -33,7 +35,6 @@
         android:textSize="20dp"
         android:layout_margin="10dp"
         android:layout_weight="1"
-        android:onClick="increase"
         />
 
     <Button
@@ -45,7 +46,6 @@
         android:textSize="20dp"
         android:layout_margin="10dp"
         android:layout_weight="1"
-        android:onClick="decrease"
         />
 
     <Button
@@ -57,7 +57,6 @@
         android:textSize="20dp"
         android:layout_margin="10dp"
         android:layout_weight="1"
-        android:onClick="setBlack"
         />
 
     </LinearLayout>
@@ -66,7 +65,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="4">
+        android:weightSum="4"
+        android:background="#dbddfe"
+        >
 
     <Button
         android:id="@+id/red_Btn"
@@ -77,7 +78,6 @@
         android:textSize="20dp"
         android:layout_margin="10dp"
         android:layout_weight="1"
-        android:onClick="setRed"
         />
 
     <Button
@@ -89,7 +89,6 @@
         android:textSize="20dp"
         android:layout_margin="10dp"
         android:layout_weight="1"
-        android:onClick="setBlue"
         />
 
     <Button
@@ -101,7 +100,6 @@
         android:textSize="20dp"
         android:layout_margin="10dp"
         android:layout_weight="1"
-        android:onClick="setGreen"
         />
 
     <Button
@@ -113,7 +111,6 @@
         android:textSize="20dp"
         android:layout_margin="10dp"
         android:layout_weight="1"
-        android:onClick="setYellow"
         />
 
     </LinearLayout>
