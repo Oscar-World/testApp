@@ -4,10 +4,14 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
 public class DrawBoard extends View {
+
+    String TAG = "터치 이벤트";
 
     Paint p1 = new Paint();
     Paint p2 = new Paint();
@@ -25,7 +29,7 @@ public class DrawBoard extends View {
     int mx, my;
     static int whatColor = 0;
 
-    public DrawBoard(Context context) {
+    public DrawBoard(Context context, AttributeSet attr) {
         super(context);
 
         p1.setColor(Color.BLACK);
@@ -86,6 +90,9 @@ public class DrawBoard extends View {
 
         dataNum +=1;
         saveData();
+        Log.d(TAG, "onTouchEvent: " + dataNum);
+        Log.d(TAG, "mx: " + mx);
+        Log.d(TAG, "my: " + my);
         return true;
 
     }
