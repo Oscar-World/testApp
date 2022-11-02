@@ -58,7 +58,7 @@
                 android:id="@+id/erase_Btn"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="<"
+                android:text="←"
                 android:textColor="@color/black"
                 android:backgroundTint="@color/gray"
                 android:textSize="30dp"
