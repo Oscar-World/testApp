@@ -30,11 +30,51 @@ public class MainActivity extends AppCompatActivity {
 //        EditText nickname_EditText = findViewById(R.id.nickname_EditText);
 //        Button button = findViewById(R.id.apply_Btn);
 //
+
+        Button a_Btn = findViewById(R.id.a_Btn);
+        Button b_Btn = findViewById(R.id.b_Btn);
+
+//        a_Btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(getApplicationContext(),"A 버튼 클릭됨", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+//        b_Btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(getApplicationContext(), "B 버튼 클릭됨", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
+
+        View.OnClickListener Click2 = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (view.getId()) {
+                    case R.id.a_Btn:
+                        Toast.makeText(getApplicationContext(),"A 버튼 클릭됨", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.b_Btn:
+                        Toast.makeText(getApplicationContext(), "B 버튼 클릭됨", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+
+            }
+        };
+
+        a_Btn.setOnClickListener(Click2);
+        b_Btn.setOnClickListener(Click2);
+
+
         Button draw_Btn = findViewById(R.id.draw_Btn);
         Button list_Btn = findViewById(R.id.list_Btn);
         Button vertical_Btn = findViewById(R.id.vertical_Btn);
         Button horizontal_Btn = findViewById(R.id.horizontal_Btn);
         Button grid_Btn = findViewById(R.id.grid_Btn);
+
+        Button calculator_Btn = findViewById(R.id.calculator_Btn);
 
         View.OnClickListener Click = new View.OnClickListener() {
             @Override
@@ -60,6 +100,10 @@ public class MainActivity extends AppCompatActivity {
                         Intent i4 = new Intent(MainActivity.this, Recycler_Grid.class);
                         startActivity(i4);
                         break;
+                    case R.id.calculator_Btn:
+                        Intent i5 = new Intent(MainActivity.this, Calculator.class);
+                        startActivity(i5);
+                        break;
                 }
 
             }
@@ -70,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
         vertical_Btn.setOnClickListener(Click);
         horizontal_Btn.setOnClickListener(Click);
         grid_Btn.setOnClickListener(Click);
+        calculator_Btn.setOnClickListener(Click);
 
 //
 //        SharedPreferences sharedPreferences = getSharedPreferences("사용자 정보",MODE_PRIVATE);
@@ -111,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
     @Override
     protected void onStart(){
         super.onStart();

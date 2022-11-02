@@ -71,32 +71,4 @@ public class DrawActivity extends AppCompatActivity {
 
     }
 
-//    public void increase(View v) {
-//        DrawBoard.radius += 2;
-//    }
-//
-//    public void decrease(View v) {
-//        DrawBoard.radius -= 2;
-//    }
-//
-//    public void setBlack(View v) {
-//        DrawBoard.whatColor = 0;
-//    }
-//
-//    public void setRed(View v) {
-//        DrawBoard.whatColor = 1;
-//    }
-//
-//    public void setBlue(View v) {
-//        DrawBoard.whatColor = 2;
-//    }
-//
-//    public void setGreen(View v) {
-//        DrawBoard.whatColor = 3;
-//    }
-//
-//    public void setYellow(View v) {
-//        DrawBoard.whatColor = 4;
-//    }
-
 }
